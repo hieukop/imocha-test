@@ -5,7 +5,6 @@ public class CustomerAdd {
     private String date;
     private String address;
     private String postcode;
-    private String state;
 
     public String getName() {
         return name;
@@ -39,11 +38,4 @@ public class CustomerAdd {
         this.postcode = postcode;
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
 }

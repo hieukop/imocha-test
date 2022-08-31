@@ -115,14 +115,14 @@ public class Customer {
         this.setAddress(customerAdd.getAddress());
         this.setBirthDate(new SimpleDateFormat("yyyy-MM-dd").parse(customerAdd.getDate()));
         this.setPostCode(customerAdd.getPostcode());
-        switch (customerAdd.getState()) {
-            case "1":
+        switch (customerAdd.getPostcode()) {
+            case "35000":
                 this.setState(State.ONE);
                 break;
-            case "2":
+            case "50000":
                 this.setState(State.TWO);
                 break;
-            case "3":
+            case "80000":
                 this.setState(State.THREE);
                 break;
 
