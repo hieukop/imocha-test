@@ -11,7 +11,7 @@
 <form th:object="${customerAdd}" method="post" enctype="multipart/form-data">
     Name:
     <input type="text" th:field="*{name}"
-           pattern="[a-zA-Z]{1,20}" title="name should only inclue letter and match under 20 character">
+           pattern="[a-zA-Z]{1,20}" title="name should only inclue letter and match under 20 character with no space">
     <br/>
     DoB:
     <input type="text" th:field="*{date}"
