@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Person</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h2>Create a Customer:</h2>
+
+<form th:object="${customerAdd}" method="post" enctype="multipart/form-data">
+    Name:
+    <input type="text" th:field="*{name}"
+           pattern="[a-zA-Z]{1,20}" title="name should only inclue letter and match under 20 character">
+    <br/>
+    DoB:
+    <input type="text" th:field="*{date}"
+           pattern="^\d{4}-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
+           title="year-month-day e.g. 2022-08-31">
+    <br/>
+    Address:
+    <input type="text" th:field="*{address}"
+           pattern="\w{1,50}" title="address should only inclue letter, number and match under 50 character">
+    <br/>
+    Post Code:
+    <select th:field="*{postcode}">
+        <option th:value="35000" th:text="35000"></option>
+        <option th:value="50000" th:text="50000"></option>
+        <option th:value="80000" th:text="80000"></option>
+    </select>
+    <br/>
+    State:
+    <input type="text" th:field="*{state}" />
+    <br/>
+    <input type="submit" value="Create" />
+</form>
+
+<br/>
+
+</body>
+</html>
