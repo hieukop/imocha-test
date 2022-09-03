@@ -1,4 +1,4 @@
-#Run steps:
+# Run steps
 1. Run:
 ```sh 
 $ git clone https://github.com/hieungo51/imocha-test.git
